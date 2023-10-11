@@ -16,7 +16,6 @@ const ProjectCard = ({ title, description, githubUrl }) => {
         width: { md: "70%" },
         mt: 4,
         transition: "all 0.3s ease-in",
-        ":hover": { transform: "scale(1.01)" },
       }}
     >
       <Stack

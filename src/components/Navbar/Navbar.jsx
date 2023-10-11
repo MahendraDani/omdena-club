@@ -6,8 +6,6 @@ import NavButton from "./NavButton";
 import { GitHub } from "@mui/icons-material";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
   return (
     <Container>
       <Stack

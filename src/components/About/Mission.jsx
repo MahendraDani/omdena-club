@@ -17,13 +17,13 @@ const Mission = () => {
     },
   ];
   return (
-    <Box sx={{ width: "100%", p: 2, py: 6, bgcolor: "azure" }}>
+    <Box sx={{ width: "100%", p: 2, py: 6, mt: 10, mb: 10 }}>
       <Container>
         <Stack
           direction={"column"}
           sx={{ justifyContent: "space-between", alignItems: "start", gap: 4 }}
         >
-          <Box>
+          <Box sx={{ color: "gray.main" }}>
             <Typography
               variant="h3"
               sx={{ display: { xs: "none", md: "block" } }}
@@ -40,6 +40,7 @@ const Mission = () => {
               justifyContent: "space-between",
               alignItems: "start",
               gap: 4,
+              color: "gray",
             }}
           >
             {data.map((item, index) => {

@@ -20,7 +20,7 @@ const NavbarMain = () => {
   return (
     <div
       className={`sticky top-0 left-0 right-0 duration-100 ease-in ${
-        scrolled ? "bg-[#FEEBFF]  opacity-95" : ""
+        scrolled ? "bg-[#FEEBFF]" : ""
       }`}
     >
       <Navbar />

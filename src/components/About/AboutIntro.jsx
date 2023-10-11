@@ -1,4 +1,5 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { ArrowRightAlt } from "@mui/icons-material";
+import { Box, Button, Container, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const AboutIntro = () => {
@@ -8,14 +9,14 @@ const AboutIntro = () => {
         direction={"column"}
         sx={{
           my: 12,
-          mb: 16,
+          mb: 2,
           justifyContent: "space-between",
           alignItems: "center",
           p: 2,
           gap: 6,
         }}
       >
-        <Box>
+        <Box color={"gray.main"}>
           <Typography
             variant="h1"
             fontWeight={700}
@@ -36,7 +37,7 @@ const AboutIntro = () => {
             AI by the people, for the people
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{ color: "gray" }}>
           <Typography
             variant="h6"
             sx={{ width: "90%", mx: "auto", textAlign: "center" }}
@@ -47,7 +48,29 @@ const AboutIntro = () => {
           </Typography>
         </Box>
         <Box>
-          <Button variant="outlined">Learn More</Button>
+          {/* <Button variant="outlined">Learn More</Button> */}
+          <Link href="https://omdena.com/about/" target="_blank">
+            <Button
+              endIcon={<ArrowRightAlt />}
+              sx={{
+                bgcolor: "purple.primary",
+                px: 3,
+                color: "white",
+                border: "2px solid",
+                borderColor: "purple.primary",
+                borderRadius: 10,
+                transition: "all 0.3s ease-in",
+                ":hover": {
+                  border: "2px solid",
+                  borderColor: "purple.primary",
+                  borderRadius: 10,
+                  color: "purple.primary",
+                },
+              }}
+            >
+              Learn More
+            </Button>
+          </Link>
         </Box>
       </Stack>
     </Container>

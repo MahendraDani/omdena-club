@@ -11,7 +11,7 @@ const About = () => {
       <NavbarMain />
       <AboutIntro />
       <Mission />
-      <Box sx={{ mt: 16 }}>
+      <Box sx={{ mt: 6 }}>
         <Footer />
       </Box>
     </Box>
