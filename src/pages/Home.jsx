@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-
+import Landing from "../components/Home/Landing";
 const Home = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const Home = () => {
         >
           <Navbar />
         </Box>
+        <Landing />
       </Stack>
     </>
   );
