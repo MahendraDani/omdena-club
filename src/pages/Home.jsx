@@ -13,7 +13,8 @@ const Home = () => {
             top: 0,
             right: 0,
             left: 0,
-            bgcolor: "azure",
+            bgcolor: "white",
+            zIndex: 100,
           }}
         >
           <Navbar />

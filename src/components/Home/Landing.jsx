@@ -53,9 +53,11 @@ const Landing = () => {
             sx={{ width: { md: "65%" }, textAlign: "center", mt: { xs: 5 } }}
           >
             <Typography variant="body1">
-              Omdena's vision is, by 2030, to help 1 million people upskill to
-              get jobs and positively affect 1 billion people through various
-              projects.{" "}
+              Building advanced AI solutions for impact-driven organizations
+              with talented Engineers passionate about making this world a
+              better place. We're on a mission to provide the global community
+              of AI engineers with a platform to gather and collaboratively
+              build solutions to real-world problems.
             </Typography>
           </Box>
         </Stack>
