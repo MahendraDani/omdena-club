@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import NavLogo from "./NavLogo";
 import NavDrawer from "./NavDrawer";
 import NavButton from "./NavButton";
+import { GitHub } from "@mui/icons-material";
 
 const Navbar = () => {
   return (
@@ -22,15 +23,30 @@ const Navbar = () => {
         </Box>
         <Stack
           direction={"row"}
-          sx={{ display: { xs: "none", md: "flex", gap: 6 } }}
+          sx={{ display: { xs: "none", md: "flex", gap: 10 } }}
         >
-          <NavButton name={"About"} variant={"standard"} path={"/about"} />
-          <NavButton
-            name={"Projects"}
-            variant={"standard"}
-            path={"/projects"}
-          />
-          <Button>Github</Button>
+          <NavButton name={"About"} path={"/about"} />
+          <NavButton name={"Projects"} path={"/projects"} />
+          <Button
+            startIcon={<GitHub />}
+            variant="outlined"
+            sx={{
+              border: "2px solid",
+              borderRadius: 10,
+              borderColor: "black",
+              color: "black",
+              transition: "all 0.5 ease-in",
+              ":hover": {
+                border: "2px solid",
+                borderRadius: 10,
+                borderColor: "black",
+                color: "white",
+                backgroundColor: "black",
+              },
+            }}
+          >
+            Github
+          </Button>
         </Stack>
         {/* For mobile screens only */}
       </Stack>

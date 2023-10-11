@@ -12,8 +12,10 @@ const DrawerButton = ({ childern, name, path }) => {
     <Link to={path}>
       <ListItem key={name} disablePadding>
         <ListItemButton>
-          <ListItemIcon>{childern}</ListItemIcon>
-          <ListItemText primary={name} />
+          <ListItemIcon sx={{ color: "purple.primary" }}>
+            {childern}
+          </ListItemIcon>
+          <ListItemText primary={name} sx={{ color: "purple.primary" }} />
         </ListItemButton>
       </ListItem>
     </Link>

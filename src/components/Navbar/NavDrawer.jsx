@@ -29,7 +29,9 @@ const NavDrawer = () => {
   };
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+      }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -43,12 +45,6 @@ const NavDrawer = () => {
           path={"/projects"}
         />
       </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>Github</ListItemButton>
-        </ListItem>
-      </List>
     </Box>
   );
   return (
@@ -56,7 +52,7 @@ const NavDrawer = () => {
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <IconButton onClick={toggleDrawer(anchor, true)}>
-            <Menu />
+            <Menu sx={{ color: "purple.primary" }} />
           </IconButton>
           <SwipeableDrawer
             anchor={anchor}
