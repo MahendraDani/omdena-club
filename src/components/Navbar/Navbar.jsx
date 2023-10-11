@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack } from "@mui/material";
+import { Box, Button, Container, Link, Stack } from "@mui/material";
 import React, { useState } from "react";
 import NavLogo from "./NavLogo";
 import NavDrawer from "./NavDrawer";
@@ -27,26 +27,28 @@ const Navbar = () => {
         >
           <NavButton name={"About"} path={"/about"} />
           <NavButton name={"Projects"} path={"/projects"} />
-          <Button
-            startIcon={<GitHub />}
-            variant="outlined"
-            sx={{
-              border: "2px solid",
-              borderRadius: 10,
-              borderColor: "gray.main",
-              color: "gray.main",
-              transition: "all 0.5 ease-in",
-              ":hover": {
+          <Link href="https://github.com/MahendraDani" target="_blank">
+            <Button
+              startIcon={<GitHub />}
+              variant="outlined"
+              sx={{
                 border: "2px solid",
                 borderRadius: 10,
                 borderColor: "gray.main",
-                color: "white",
-                backgroundColor: "gray.main",
-              },
-            }}
-          >
-            Github
-          </Button>
+                color: "gray.main",
+                transition: "all 0.5 ease-in",
+                ":hover": {
+                  border: "2px solid",
+                  borderRadius: 10,
+                  borderColor: "gray.main",
+                  color: "white",
+                  backgroundColor: "gray.main",
+                },
+              }}
+            >
+              Github
+            </Button>
+          </Link>
         </Stack>
         {/* For mobile screens only */}
       </Stack>
