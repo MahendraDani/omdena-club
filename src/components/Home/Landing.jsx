@@ -1,6 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import { ArrowRightAlt } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <Container>
@@ -67,26 +68,28 @@ const Landing = () => {
           </Box>
         </Stack>
         <Box>
-          <Button
-            endIcon={<ArrowRightAlt />}
-            sx={{
-              bgcolor: "purple.primary",
-              px: 3,
-              color: "white",
-              border: "2px solid",
-              borderColor: "purple.primary",
-              borderRadius: 10,
-              transition: "all 0.3s ease-in",
-              ":hover": {
+          <Link to={"/projects"}>
+            <Button
+              endIcon={<ArrowRightAlt />}
+              sx={{
+                bgcolor: "purple.primary",
+                px: 3,
+                color: "white",
                 border: "2px solid",
                 borderColor: "purple.primary",
                 borderRadius: 10,
-                color: "purple.primary",
-              },
-            }}
-          >
-            Projects
-          </Button>
+                transition: "all 0.3s ease-in",
+                ":hover": {
+                  border: "2px solid",
+                  borderColor: "purple.primary",
+                  borderRadius: 10,
+                  color: "purple.primary",
+                },
+              }}
+            >
+              Projects
+            </Button>
+          </Link>
         </Box>
       </Stack>
     </Container>
