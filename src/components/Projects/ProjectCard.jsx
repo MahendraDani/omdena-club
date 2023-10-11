@@ -1,3 +1,4 @@
+import { ArrowRightAlt } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -25,9 +26,10 @@ const ProjectCard = ({ title, description, githubUrl }) => {
           justifyContent: "space-between",
           gap: { md: 12 },
           alignItems: { xs: "center", md: "Start" },
-          border: "2px solid gray",
+          border: "1px solid gray",
           borderRadius: 2,
-          background: "azure",
+          background: "#fff",
+          boxShadow: "2",
         }}
       >
         <img src="/road.png" alt="Road" className="w-64 h-64 rounded-full" />
@@ -37,11 +39,32 @@ const ProjectCard = ({ title, description, githubUrl }) => {
             gap: { xs: 1.5, md: 3 },
           }}
         >
-          <Typography variant="h5">{title}</Typography>
-          <Typography>{description}</Typography>
+          <Typography variant="h5" sx={{ color: "purple.primary" }}>
+            {title}
+          </Typography>
+          <Typography sx={{ color: "gray" }}>{description}</Typography>
           <Box>
             <Link href={githubUrl} target="_blank">
-              <Button>Learn More</Button>
+              <Button
+                endIcon={<ArrowRightAlt />}
+                sx={{
+                  bgcolor: "purple.primary",
+                  px: 3,
+                  color: "white",
+                  border: "2px solid",
+                  borderColor: "purple.primary",
+                  borderRadius: 10,
+                  transition: "all 0.3s ease-in",
+                  ":hover": {
+                    border: "2px solid",
+                    borderColor: "purple.primary",
+                    borderRadius: 10,
+                    color: "purple.primary",
+                  },
+                }}
+              >
+                Learn More
+              </Button>
             </Link>
           </Box>
         </Stack>
