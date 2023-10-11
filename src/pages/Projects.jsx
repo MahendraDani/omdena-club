@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Footer from "../components/Footer/Footer";
+import NavbarMain from "../components/Navbar/NavbarMain";
 
 const Projects = () => {
   const projects = [
@@ -23,18 +23,7 @@ const Projects = () => {
   ];
   return (
     <Box>
-      <Box
-        sx={{
-          position: "sticky",
-          top: 0,
-          right: 0,
-          left: 0,
-          backgroundColor: "white",
-          zIndex: 100,
-        }}
-      >
-        <Navbar />
-      </Box>
+      <NavbarMain />
       <Box>
         {projects.map((project, index) => {
           return (

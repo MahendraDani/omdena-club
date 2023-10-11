@@ -7,7 +7,7 @@ const Landing = () => {
       <Stack
         sx={{
           justifyContent: "space-evenly",
-          py: 16,
+          py: 10,
           alignItems: "center",
           height: "42rem",
         }}
@@ -35,15 +35,20 @@ const Landing = () => {
               </div>
             </Typography>
             <Typography
-              variant="h2"
               sx={{
                 textAlign: "center",
-                display: { xs: "none", md: "block", fontWeight: "700" },
+                display: {
+                  xs: "none",
+                  md: "block",
+                  fontWeight: "700",
+                  width: "100%",
+                  fontSize: "5rem",
+                },
               }}
             >
               Artificial Intelligence for{" "}
               <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                <Typography variant={"h2"} sx={{ fontWeight: "800" }}>
+                <Typography sx={{ fontWeight: "800", fontSize: "5rem" }}>
                   {"Impact"}
                 </Typography>
               </div>

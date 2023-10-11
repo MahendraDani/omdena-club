@@ -24,7 +24,6 @@ const Navbar = () => {
           direction={"row"}
           sx={{ display: { xs: "none", md: "flex", gap: 6 } }}
         >
-          <NavButton name={"Home"} variant={"standard"} path={"/"} />
           <NavButton name={"About"} variant={"standard"} path={"/about"} />
           <NavButton
             name={"Projects"}
