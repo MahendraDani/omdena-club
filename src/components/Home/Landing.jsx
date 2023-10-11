@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import React from "react";
-
+import { ArrowRightAlt } from "@mui/icons-material";
 const Landing = () => {
   return (
     <Container>
@@ -21,7 +21,7 @@ const Landing = () => {
             gap: { md: 2, xs: 1 },
           }}
         >
-          <Box>
+          <Box sx={{ color: "gray.main" }}>
             <Typography
               variant="h4"
               fontWeight={600}
@@ -55,9 +55,9 @@ const Landing = () => {
             </Typography>
           </Box>
           <Box
-            sx={{ width: { md: "65%" }, textAlign: "center", mt: { xs: 5 } }}
+            sx={{ width: { md: "75%" }, textAlign: "center", mt: { xs: 5 } }}
           >
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ color: "gray" }}>
               Building advanced AI solutions for impact-driven organizations
               with talented Engineers passionate about making this world a
               better place. We're on a mission to provide the global community
@@ -67,7 +67,26 @@ const Landing = () => {
           </Box>
         </Stack>
         <Box>
-          <Button variant="standard">Projects</Button>
+          <Button
+            endIcon={<ArrowRightAlt />}
+            sx={{
+              bgcolor: "purple.primary",
+              px: 3,
+              color: "white",
+              border: "2px solid",
+              borderColor: "purple.primary",
+              borderRadius: 10,
+              transition: "all 0.3s ease-in",
+              ":hover": {
+                border: "2px solid",
+                borderColor: "purple.primary",
+                borderRadius: 10,
+                color: "purple.primary",
+              },
+            }}
+          >
+            Projects
+          </Button>
         </Box>
       </Stack>
     </Container>

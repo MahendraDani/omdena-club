@@ -33,15 +33,15 @@ const Navbar = () => {
             sx={{
               border: "2px solid",
               borderRadius: 10,
-              borderColor: "black",
-              color: "black",
+              borderColor: "gray.main",
+              color: "gray.main",
               transition: "all 0.5 ease-in",
               ":hover": {
                 border: "2px solid",
                 borderRadius: 10,
-                borderColor: "black",
+                borderColor: "gray.main",
                 color: "white",
-                backgroundColor: "black",
+                backgroundColor: "gray.main",
               },
             }}
           >
