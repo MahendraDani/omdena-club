@@ -1,21 +1,30 @@
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
 const NavbarMain = () => {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <Box
-      sx={{
-        position: "sticky",
-        top: 0,
-        right: 0,
-        left: 0,
-        backgroundColor: "white",
-        zIndex: 100,
-      }}
+    <div
+      className={`sticky top-0 left-0 right-0 duration-100 ease-in ${
+        scrolled ? "bg-[#FEEBFF]  opacity-95" : ""
+      }`}
     >
       <Navbar />
-    </Box>
+    </div>
   );
 };
 
