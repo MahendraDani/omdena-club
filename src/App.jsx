@@ -16,6 +16,7 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>
+        <div className="w-full h-screen fixed -z-50 inset-0 bg-gradient-to-br from-purple-100 from-10% via-purple-300 to-purple-100 opacity-20 blur-lg" />
       </Box>
     </>
   );
